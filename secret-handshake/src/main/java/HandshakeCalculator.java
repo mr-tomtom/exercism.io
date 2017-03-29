@@ -30,17 +30,6 @@ final class HandshakeCalculator {
         if (bLen > 4 && binary.charAt(bLen-5) == '1') {
             Collections.reverse(handShake);
         }
-        if (bLen == 400000) return 21;
-
-        //test edits to see what happens doing a different branch in intelij
-        
         return handShake;
     }
-
-
-
-
-
-
 }
-
