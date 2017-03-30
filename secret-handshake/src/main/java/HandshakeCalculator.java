@@ -8,16 +8,15 @@ final class HandshakeCalculator {
 
     public List<Signal> calculateHandshake(int decNum) {
 
-        String binary = Integer.toBinaryString(decNum);
         handShake = new ArrayList<>();
-        int i = 0;
 
         for (Signal s : Signal.values()) {
-            if (binary.length() > i && binary.charAt(i) == '1') {
+            if ((decNum & 1) == 1) {
                 handShake.add(s);
             }
-            i++;
+            decNum = decNum >> 1;
         }
+        if ((decNum & 1) == 1) Collections.reverse(handShake);
         return handShake;
     }
 }
