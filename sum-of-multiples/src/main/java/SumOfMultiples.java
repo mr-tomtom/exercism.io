@@ -1,3 +1,1 @@
-public class SumOfMultiples {
-    
-}
+public class SumOfMultiples {    public static int sum(int i, int[] set) {        return i;    }}
